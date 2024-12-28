@@ -6,7 +6,10 @@ from flask_cors import CORS
 
 
 app = Flask(__name__)
-CORS(app)  # Enable CORS for all routes
+# Enable CORS for all routes
+CORS(app, resources={r"/*": {
+    "origins": "*"}
+})
 
 # Directory paths
 DIR = "D:/Projects_Sumit/colorize"
